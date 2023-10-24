@@ -1,5 +1,6 @@
 import sys
 import turtle as t
+from random import random
 
 
 def get_python_version() -> str:
@@ -28,8 +29,21 @@ def draw_star_shape():
     t.mainloop()
 
 
+def draw_randomly():
+    t1 = t.Turtle()
+    for i in range(100):
+        steps = int(random() * 100)
+        angle = int(random() * 360)
+        t1.right(angle)
+        t1.fd(steps)
+    t.mainloop()
+
+
 if __name__ == '__main__':
     print(f'Python version {get_python_version()}')
+    canvasSize = t.screensize()
+    print(f'Turtle canvas size (w,h): ({t.window_width()},{t.window_height()})')
     t.title(f'Turtle Graphics Demo using python {get_python_version()}')
     # draw_geometric_pattern()
-    draw_star_shape()
+    # draw_star_shape()
+    draw_randomly()
