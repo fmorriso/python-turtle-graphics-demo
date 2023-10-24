@@ -30,5 +30,6 @@ def draw_star_shape():
 
 if __name__ == '__main__':
     print(f'Python version {get_python_version()}')
+    t.title(f'Turtle Graphics Demo using python {get_python_version()}')
     # draw_geometric_pattern()
     draw_star_shape()
