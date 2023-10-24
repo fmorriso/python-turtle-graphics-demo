@@ -1,6 +1,9 @@
 import sys
 import turtle as t
 from random import random
+from time import perf_counter as clock
+
+from designer import Designer
 
 
 def get_python_version() -> str:
@@ -39,6 +42,19 @@ def draw_randomly():
     t.mainloop()
 
 
+def run_demo_byte_design() -> str:
+    t1 = Designer()
+    t1.speed(1)
+    t1.hideturtle()
+    t1.getscreen().delay(4096)
+    t1.getscreen().tracer(1024)
+    at = clock()
+    t1.design(t1.position(), 2)
+    et = clock()
+    t.mainloop()
+    return "runtime: %.2f sec." % (et-at)
+
+
 if __name__ == '__main__':
     print(f'Python version {get_python_version()}')
     canvasSize = t.screensize()
@@ -46,4 +62,5 @@ if __name__ == '__main__':
     t.title(f'Turtle Graphics Demo using python {get_python_version()}')
     # draw_geometric_pattern()
     # draw_star_shape()
-    draw_randomly()
+    # draw_randomly()
+    print(f'ByteDesign demo {run_demo_byte_design()}')
