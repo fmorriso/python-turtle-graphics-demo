@@ -51,8 +51,8 @@ def run_demo_byte_design() -> str:
     at = clock()
     t1.design(t1.position(), 2)
     et = clock()
-    t.mainloop()
-    return "runtime: %.2f sec." % (et-at)
+    t.mainloop()    
+    return f'runtime: {(et-at):.2f} sec.'
 
 
 if __name__ == '__main__':

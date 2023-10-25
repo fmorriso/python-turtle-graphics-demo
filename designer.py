@@ -146,7 +146,7 @@ class Designer(Turtle):
 
 def main():
     t = Designer()
-    t.speed(0)
+    t.speed(3)
     t.hideturtle()
     t.getscreen().delay(4096*8)
     t.getscreen().tracer(0)
