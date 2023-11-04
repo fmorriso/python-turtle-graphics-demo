@@ -61,6 +61,6 @@ if __name__ == '__main__':
     print(f'Turtle canvas size (w,h): ({t.window_width()},{t.window_height()})')
     t.title(f'Turtle Graphics Demo using python {get_python_version()}')
     # draw_geometric_pattern()
-    # draw_star_shape()
+    draw_star_shape()
     # draw_randomly()
-    print(f'ByteDesign demo {run_demo_byte_design()}')
+    # print(f'ByteDesign demo {run_demo_byte_design()}')
